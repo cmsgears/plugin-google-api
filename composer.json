@@ -1,0 +1,29 @@
+{
+	"name" : "cmsgears/plugin-google-api",
+	"description" : "Google API plugin for CMSGears provide options to configure Google API.",
+	"homepage" : "http://www.cmsgears.org",
+	"type" : "package",
+	"keywords" : [
+		"yii2",
+		"cmsgears",
+		"plugin",
+		"google api"
+	],
+	"license" : "GPLv3",
+	"support" : {
+		"source" : "http://www.cmsgears.org/downloads/plugins/google-api",
+		"forum" : "http://forum.cmsgears.org/",
+		"resources" : "http://resources.cmsgears.org/",
+		"issues" : "https://www.amazingdesk.com/cmsgears/issues/",
+		"blog" : "http://cmsgears.tutorials24x7.com/"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"cmsgears\\google\\api" : ""
+		}
+	},
+	"require" : {
+		"php" : ">=5.4.0",
+		"cmsgears/module-core" : "*"
+	}
+}
