@@ -19,7 +19,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"cmsgears\\google\\api" : ""
+			"cmsgears\\google\\api\\" : ""
 		}
 	},
 	"require" : {
