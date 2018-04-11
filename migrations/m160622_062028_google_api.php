@@ -64,10 +64,10 @@ class m160622_062028_google_api extends Migration {
 			'name' => 'Config Google API', 'slug' => 'config-google-api',
 			'type' => CoreGlobal::TYPE_SYSTEM,
 			'description' => 'google configuration form.',
-			'successMessage' => 'Google API configurations saved successfully.',
+			'success' => 'Google API configurations saved successfully.',
 			'captcha' => false,
 			'visibility' => Form::VISIBILITY_PROTECTED,
-			'active' => true, 'userMail' => false,'adminMail' => false,
+			'status' => Form::STATUS_ACTIVE, 'userMail' => false,'adminMail' => false,
 			'createdAt' => DateUtil::getDateTime(),
 			'modifiedAt' => DateUtil::getDateTime()
 		]);
