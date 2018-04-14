@@ -95,20 +95,20 @@ class m160622_062028_google_api extends Migration {
 
 	private function insertDefaultConfig() {
 
-		$columns = [ 'modelId', 'name', 'label', 'type', 'valueType', 'value' ];
+		$columns = [ 'modelId', 'name', 'label', 'type', 'active', 'valueType', 'value', 'data' ];
 
 		$metas	= [
-			[ $this->site->id, 'active', 'Active', 'google-api', 'flag', '0' ],
-			[ $this->site->id, 'type', 'Type', 'google-api', 'text', NULL ],
-			[ $this->site->id, 'project_id', 'Project Id', 'google-api', 'text', NULL ],
-			[ $this->site->id, 'private_key_id', 'Private Key Id', 'google-api', 'text', NULL ],
-			[ $this->site->id, 'private_key', 'Private Key', 'google-api', 'text', NULL ],
-			[ $this->site->id, 'client_email', 'Client Email', 'google-api', 'text', NULL ],
-			[ $this->site->id, 'client_id', 'Client Id', 'google-api', 'text', NULL ],
-			[ $this->site->id, 'auth_uri', 'Auth URI', 'google-api', 'text', '5' ],
-			[ $this->site->id, 'token_uri', 'Token URI', 'google-api', 'text', '5' ],
-			[ $this->site->id, 'auth_provider_x509_cert_url', 'Auth Provider X509 Cert Url', 'google-api', 'text', '5' ],
-			[ $this->site->id, 'client_x509_cert_url', 'Client X509 Cert Url', 'google-api', 'text', '5' ]
+			[ $this->site->id, 'active', 'Active', 'google-api', 1, 'flag', '0', NULL ],
+			[ $this->site->id, 'type', 'Type', 'google-api', 1, 'text', NULL, NULL ],
+			[ $this->site->id, 'project_id', 'Project Id', 'google-api', 1, 'text', NULL, NULL ],
+			[ $this->site->id, 'private_key_id', 'Private Key Id', 'google-api', 1, 'text', NULL, NULL ],
+			[ $this->site->id, 'private_key', 'Private Key', 'google-api', 1, 'text', NULL, NULL ],
+			[ $this->site->id, 'client_email', 'Client Email', 'google-api', 1, 'text', NULL, NULL ],
+			[ $this->site->id, 'client_id', 'Client Id', 'google-api', 1, 'text', NULL, NULL ],
+			[ $this->site->id, 'auth_uri', 'Auth URI', 'google-api', 1, 'text', '5', NULL ],
+			[ $this->site->id, 'token_uri', 'Token URI', 'google-api', 1, 'text', '5', NULL ],
+			[ $this->site->id, 'auth_provider_x509_cert_url', 'Auth Provider X509 Cert Url', 'google-api', 1, 'text', '5', NULL ],
+			[ $this->site->id, 'client_x509_cert_url', 'Client X509 Cert Url', 'google-api', 1, 'text', '5', NULL ]
 		];
 
 		$this->batchInsert( $this->prefix . 'core_site_meta', $columns, $metas );
