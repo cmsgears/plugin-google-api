@@ -74,20 +74,20 @@ class m160622_062028_google_api extends Migration {
 
 		$config	= Form::findBySlugType( 'config-google-api', CoreGlobal::TYPE_SYSTEM );
 
-		$columns = [ 'formId', 'name', 'label', 'type', 'compress', 'validators', 'order', 'icon', 'htmlOptions' ];
+		$columns = [ 'formId', 'name', 'label', 'type', 'compress', 'meta', 'active', 'validators', 'order', 'icon', 'htmlOptions' ];
 
 		$fields	= [
-			[ $config->id, 'active', 'Active', FormField::TYPE_TOGGLE, false, 'required', 0, NULL, '{"title":"Active"}' ],
-			[ $config->id, 'type', 'Type', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Type","placeholder":"Type"}' ],
-			[ $config->id, 'project_id', 'Project Id', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Project Id","placeholder":"Project Id"}' ],
-			[ $config->id, 'private_key_id', 'Private Key Id', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Private Key Id","placeholder":"Private Key Id"}' ],
-			[ $config->id, 'private_key', 'Private Key', FormField::TYPE_PASSWORD, false, 'required', 0, NULL, '{"title":"Private Key","placeholder":"Private Key"}' ],
-			[ $config->id, 'client_email', 'Client Email', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Client Email","placeholder":"Client Email"}' ],
-			[ $config->id, 'client_id', 'Client Id', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Client Id","placeholder":"Client Id"}' ],
-			[ $config->id, 'auth_uri', 'Auth URI', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Auth URI","placeholder":"Auth URI"}' ],
-			[ $config->id, 'token_uri', 'Token URI', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Token URI","placeholder":"Token URI"}' ],
-			[ $config->id, 'auth_provider_x509_cert_url', 'Auth Provider X509 Cert Url', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Auth Cert Url","placeholder":"Auth Cert Url"}' ],
-			[ $config->id, 'client_x509_cert_url', 'Client X509 Cert Url', FormField::TYPE_TEXT, false, 'required', 0, NULL, '{"title":"Client Cert Url","placeholder":"Client Cert Url"}' ]
+			[ $config->id, 'active', 'Active', FormField::TYPE_TOGGLE, false, true, true, 'required', 0, NULL, '{"title":"Active"}' ],
+			[ $config->id, 'type', 'Type', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Type","placeholder":"Type"}' ],
+			[ $config->id, 'project_id', 'Project Id', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Project Id","placeholder":"Project Id"}' ],
+			[ $config->id, 'private_key_id', 'Private Key Id', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Private Key Id","placeholder":"Private Key Id"}' ],
+			[ $config->id, 'private_key', 'Private Key', FormField::TYPE_PASSWORD, false, true, true, 'required', 0, NULL, '{"title":"Private Key","placeholder":"Private Key"}' ],
+			[ $config->id, 'client_email', 'Client Email', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Client Email","placeholder":"Client Email"}' ],
+			[ $config->id, 'client_id', 'Client Id', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Client Id","placeholder":"Client Id"}' ],
+			[ $config->id, 'auth_uri', 'Auth URI', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Auth URI","placeholder":"Auth URI"}' ],
+			[ $config->id, 'token_uri', 'Token URI', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Token URI","placeholder":"Token URI"}' ],
+			[ $config->id, 'auth_provider_x509_cert_url', 'Auth Provider X509 Cert Url', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Auth Cert Url","placeholder":"Auth Cert Url"}' ],
+			[ $config->id, 'client_x509_cert_url', 'Client X509 Cert Url', FormField::TYPE_TEXT, false, true, true, 'required', 0, NULL, '{"title":"Client Cert Url","placeholder":"Client Cert Url"}' ]
 		];
 
 		$this->batchInsert( $this->prefix . 'core_form_field', $columns, $fields );
