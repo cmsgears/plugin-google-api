@@ -25,7 +25,7 @@ use cmsgears\core\common\utilities\DateUtil;
  *
  * @since 1.0.0
  */
-class m160622_062028_google_api extends Migration {
+class m160710_062028_google_api extends Migration {
 
 	// Public Variables
 
@@ -116,7 +116,7 @@ class m160622_062028_google_api extends Migration {
 
 	public function down() {
 
-		echo "m160622_062028_google_api will be deleted with m160621_014408_core.\n";
+		echo "m160710_062028_google_api will be deleted with m160621_014408_core.\n";
 
 		return true;
 	}
