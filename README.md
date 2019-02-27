@@ -9,5 +9,6 @@ Description - Google API plugin for CMSGears provide options to configure Google
 Highlighted Features
 =========================================
 1. It provide options to configure the api keys from admin.
+2. It generate the JSON string required to query Google services enabled for Service Account.
 
 Notes: The detailed description for each feature can be found at http://www.cmsgears.org.
