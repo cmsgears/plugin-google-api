@@ -9,9 +9,6 @@
 
 namespace cmsgears\google\api\config;
 
-// CMG Imports
-use cmsgears\core\common\config\Properties;
-
 /**
  * GoogleApiProperties provide methods to access the properties specific to Google APIs.
  *
@@ -19,35 +16,32 @@ use cmsgears\core\common\config\Properties;
  *
  * @since 1.0.0
  */
-class GoogleApiProperties extends Properties {
+class GoogleApiProperties extends \cmsgears\core\common\config\Properties {
 
 	// Variables ---------------------------------------------------
 
 	// Globals ----------------
 
-	const CONFIG_GOOGLE_API			= 'google-api';
+	const CONFIG_GOOGLE_API = 'google-api';
 
-	const PROP_ACTIVE				= 'active';
+	const PROP_ACTIVE = 'active';
 
-	const PROP_TYPE					= 'type';
+	const PROP_TYPE = 'type';
 
-	const PROP_PROJECT_ID			= 'project_id';
+	const PROP_PROJECT_ID = 'project_id';
 
-	const PROP_PRIVATE_KEY_ID		= 'private_key_id';
+	const PROP_PRIVATE_KEY_ID	= 'private_key_id';
+	const PROP_PRIVATE_KEY		= 'private_key';
 
-	const PROP_PRIVATE_KEY			= 'private_key';
+	const PROP_CLIENT_EMAIL	= 'client_email';
+	const PROP_CLIENT_ID	= 'client_id';
 
-	const PROP_CLIENT_EMAIL			= 'client_email';
+	const PROP_AUTH_URI		= 'auth_uri';
+	const PROP_TOKEN_URI	= 'token_uri';
 
-	const PROP_CLIENT_ID			= 'client_id';
+	const PROP_AUTH_CERT_URL = 'auth_provider_x509_cert_url';
 
-	const PROP_AUTH_URI				= 'auth_uri';
-
-	const PROP_TOKEN_URI			= 'token_uri';
-
-	const PROP_AUTH_CERT_URL		= 'auth_provider_x509_cert_url';
-
-	const PROP_CLIENT_CERT_URL		= 'client_x509_cert_url';
+	const PROP_CLIENT_CERT_URL	= 'client_x509_cert_url';
 
 	// Public -----------------
 

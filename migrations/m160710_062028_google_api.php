@@ -10,8 +10,6 @@
 // CMG Imports
 use cmsgears\core\common\config\CoreGlobal;
 
-use cmsgears\core\common\base\Migration;
-
 use cmsgears\core\common\models\entities\Site;
 use cmsgears\core\common\models\entities\User;
 use cmsgears\core\common\models\resources\Form;
@@ -25,7 +23,7 @@ use cmsgears\core\common\utilities\DateUtil;
  *
  * @since 1.0.0
  */
-class m160710_062028_google_api extends Migration {
+class m160710_062028_google_api extends \cmsgears\core\common\base\Migration {
 
 	// Public Variables
 
@@ -39,7 +37,7 @@ class m160710_062028_google_api extends Migration {
 	public function init() {
 
 		// Table prefix
-		$this->prefix	= Yii::$app->migration->cmgPrefix;
+		$this->prefix = Yii::$app->migration->cmgPrefix;
 
 		$this->site		= Site::findBySlug( CoreGlobal::SITE_MAIN );
 		$this->master	= User::findByUsername( Yii::$app->migration->getSiteMaster() );
@@ -63,7 +61,7 @@ class m160710_062028_google_api extends Migration {
 			'createdBy' => $this->master->id, 'modifiedBy' => $this->master->id,
 			'name' => 'Config Google API', 'slug' => 'config-google-api',
 			'type' => CoreGlobal::TYPE_SYSTEM,
-			'description' => 'google configuration form.',
+			'description' => 'Google API configuration form.',
 			'success' => 'Google API configurations saved successfully.',
 			'captcha' => false,
 			'visibility' => Form::VISIBILITY_PROTECTED,
